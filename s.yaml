@@ -15,8 +15,6 @@ services:
   cpu-io-stress-web-test-service: # 业务名称/模块名称
     component: fc
     actions:
-      pre-deploy: # 在deploy之前运行
-        - component: fc build --use-docker --dockerfile ./code/Dockerfile
     props:
       region: ${vars.region}
       service: ${vars.service}
